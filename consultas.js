@@ -1,1 +1,4 @@
-// FIND: retorna todos os streamings que estão no banco de dados
+//FIND: retorna todos as plataformas de streaming que estão no banco de dados
+db.streamings.find().pretty(); 
+//SIZE: lista as inscrições com 1 plataforma de streaming
+db.inscricoes.find({platforms:{$size: 1}}).pretty();
