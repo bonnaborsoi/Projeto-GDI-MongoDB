@@ -1,7 +1,9 @@
-[{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebdf"
-  },
+// Cria coleção de mídias (filmes e séries)
+
+db.createCollection("visual_media");
+
+db.players.insertMany([
+{
   "title": "Star Wars: Episódio V - O Império Contra-Ataca",
   "director": "Irvin Kershner",
   "year": 1980,
@@ -10,10 +12,8 @@
   "imdb_score": 8.7,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe0"
-  },
+},
+{
   "title": "A Viagem de Chihiro",
   "director": "Hayao Miyazaki",
   "year": 2001,
@@ -22,10 +22,8 @@
   "imdb_score": 8.6,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe1"
-  },
+},
+{
   "title": "O Senhor dos Anéis: A Sociedade do Anel",
   "director": "Peter Jackson",
   "year": 2001,
@@ -34,10 +32,8 @@
   "imdb_score": 8.8,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe2"
-  },
+},
+{
   "title": "Karate Kid",
   "director": "Harald Zwart",
   "year": 2010,
@@ -46,10 +42,8 @@
   "imdb_score": 6.2,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe3"
-  },
+},
+{
   "title": "Tropa de Elite",
   "director": "José Padilha",
   "year": 2007,
@@ -58,10 +52,8 @@
   "imdb_score": 8,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe4"
-  },
+},
+{
   "title": "As Vantagens De Ser Invisível",
   "director": "Stephen Chbosky",
   "year": 2012,
@@ -70,10 +62,8 @@
   "imdb_score": 8,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe5"
-  },
+},
+{
   "title": "Encanto",
   "director": "Jared Bush",
   "year": 2021,
@@ -82,10 +72,8 @@
   "imdb_score": 7.2,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe6"
-  },
+},
+{
   "title": "Cidade De Deus",
   "director": "Fernando Meirelles",
   "year": 2002,
@@ -94,10 +82,8 @@
   "imdb_score": 8.6,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe7"
-  },
+},
+{
   "title": "O Som ao Redor",
   "director": "Kleber Mendonça Filho",
   "year": 2012,
@@ -106,10 +92,8 @@
   "imdb_score": 7.1,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe8"
-  },
+},
+{
   "title": "Interestelar",
   "director": "Christopher Nolan",
   "year": 2014,
@@ -118,10 +102,8 @@
   "imdb_score": 8.6,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebe9"
-  },
+},
+{
   "title": "Esposa de Mentirinha",
   "director": "Dennis Dugan",
   "year": 2011,
@@ -130,10 +112,8 @@
   "imdb_score": 6.4,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebea"
-  },
+},
+{
   "title": "Clone Wars",
   "director": "Dave Filoni",
   "year": 2008,
@@ -142,10 +122,8 @@
   "imdb_score": 8.4,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebeb"
-  },
+},
+{
   "title": "Matrix",
   "director": "Lana Wachowski",
   "year": 1999,
@@ -154,10 +132,8 @@
   "imdb_score": 8.7,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebec"
-  },
+},
+{
   "title": "Ilha do Medo",
   "director": "Martin Scorsese",
   "year": 2010,
@@ -166,10 +142,8 @@
   "imdb_score": 8.2,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebed"
-  },
+},
+{
   "title": "A Freira",
   "director": "Corin Hardy",
   "year": 2018,
@@ -178,10 +152,8 @@
   "imdb_score": 5.3,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebee"
-  },
+},
+{
   "title": "Game of Thrones",
   "director": "David Benioff",
   "year": 2011,
@@ -190,10 +162,8 @@
   "imdb_score": 9.2,
   "metacritic_must_see": true,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebef"
-  },
+},
+{
   "title": "Supernatural",
   "director": "Eric Kipke",
   "year": 2005,
@@ -202,10 +172,8 @@
   "imdb_score": 8.4,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf0"
-  },
+},
+{
   "title": "O Rei Leão",
   "director": "Roger Allers",
   "year": 1994,
@@ -214,10 +182,8 @@
   "imdb_score": 8.5,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf1"
-  },
+},
+{
   "title": "De Volta para o Futuro",
   "director": "Robert Zemeckis",
   "year": 1985,
@@ -226,10 +192,8 @@
   "imdb_score": 8.5,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf2"
-  },
+},
+{
   "title": "Homem de Ferro 3",
   "director": "Shane Black",
   "year": 2013,
@@ -238,10 +202,8 @@
   "imdb_score": 7.1,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf3"
-  },
+},
+{
   "title": "Se Beber, Não Case!",
   "director": "Todd Phillips",
   "year": 2009,
@@ -250,10 +212,8 @@
   "imdb_score": 7.7,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf4"
-  },
+},
+{
   "title": "Como eu era antes de você",
   "director": "Thea Sharrock",
   "year": 2016,
@@ -262,10 +222,8 @@
   "imdb_score": 7.4,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf5"
-  },
+},
+{
   "title": "The Mandalorian",
   "director": "Jon Favreau",
   "year": 2019,
@@ -274,10 +232,8 @@
   "imdb_score": 8.7,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf6"
-  },
+},
+{
   "title": "O Silêncio dos Inocentes",
   "director": "Jonathan Demme",
   "year": 1991,
@@ -286,10 +242,8 @@
   "imdb_score": 8.6,
   "metacritic_must_see": true,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf7"
-  },
+},
+{
   "title": "Homem-Aranha",
   "director": "Sam Raimi",
   "year": 2002,
@@ -298,10 +252,8 @@
   "imdb_score": 7.4,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf8"
-  },
+},
+{
   "title": "Top Gun - Asas Indomáveis",
   "director": "Tony Scott",
   "year": 1986,
@@ -310,10 +262,8 @@
   "imdb_score": 6.9,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebf9"
-  },
+},
+{
   "title": "A Bela Adormecida",
   "director": "Clyde Geronimi",
   "year": 1959,
@@ -322,10 +272,8 @@
   "imdb_score": 7.2,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebfa"
-  },
+},
+{
   "title": "A Múmia",
   "director": "Stephen Sommers",
   "year": 1999,
@@ -334,10 +282,8 @@
   "imdb_score": 7.1,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebfb"
-  },
+},
+{
   "title": "Até o Último Homem",
   "director": "Mel Gibson",
   "year": 2016,
@@ -346,10 +292,8 @@
   "imdb_score": 8.1,
   "metacritic_must_see": false,
   "tipo": "filme"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebfc"
-  },
+},
+{
   "title": "A Grande Família",
   "director": "Maurício Farias",
   "year": 2001,
@@ -358,10 +302,8 @@
   "imdb_score": 7.7,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebfd"
-  },
+},
+{
   "title": "Um Maluco no Pedaço",
   "director": "Jeff Melman",
   "year": 1990,
@@ -370,10 +312,8 @@
   "imdb_score": 7.9,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebfe"
-  },
+},
+{
   "title": "Breaking Bad",
   "director": "Vince Gilligan",
   "year": 2008,
@@ -382,10 +322,8 @@
   "imdb_score": 9.5,
   "metacritic_must_see": true,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ebff"
-  },
+},
+{
   "title": "Avatar: A lenda de Aang",
   "director": "Joaquim dos Santos",
   "year": 2005,
@@ -394,10 +332,8 @@
   "imdb_score": 9.3,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ec00"
-  },
+},
+{
   "title": "House, M.D.",
   "director": "Deran Sarafian",
   "year": 2004,
@@ -406,10 +342,8 @@
   "imdb_score": 8.7,
   "metacritic_must_see": false,
   "tipo": "série"
-},{
-  "_id": {
-    "$oid": "634363c7e7ca79111913ec01"
-  },
+},
+{
   "title": "How I Met Your Mother",
   "director": "Pamela Fryman",
   "year": 2005,
@@ -418,4 +352,4 @@
   "imdb_score": 8.3,
   "metacritic_must_see": false,
   "tipo": "série"
-}]
+}]);
