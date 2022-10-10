@@ -3,6 +3,7 @@ db.dropDatabase();
 // Criando coleção de mídias (filmes e séries)
 db.createCollection("visual_media");
 
+// Inserindo na coleção
 db.visual_media.insertMany([
 {
   "title": "Star Wars: Episódio V - O Império Contra-Ataca",
