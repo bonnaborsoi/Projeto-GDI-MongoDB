@@ -8,8 +8,8 @@
   "genre": "fantasia",
   "classification": "L",
   "imdb_score": 8.7,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe0"
@@ -20,8 +20,8 @@
   "genre": "animação",
   "classification": "L",
   "imdb_score": 8.6,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe1"
@@ -32,8 +32,8 @@
   "genre": "fantasia",
   "classification": "12",
   "imdb_score": 8.8,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe2"
@@ -44,8 +44,8 @@
   "genre": "drama",
   "classification": "10",
   "imdb_score": 6.2,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe3"
@@ -56,8 +56,8 @@
   "genre": "ação",
   "classification": "16",
   "imdb_score": 8,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe4"
@@ -68,8 +68,8 @@
   "genre": "drama",
   "classification": "14",
   "imdb_score": 8,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe5"
@@ -80,8 +80,8 @@
   "genre": "animação",
   "classification": "L",
   "imdb_score": 7.2,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe6"
@@ -92,8 +92,8 @@
   "genre": "drama",
   "classification": "18",
   "imdb_score": 8.6,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe7"
@@ -104,8 +104,8 @@
   "genre": "drama",
   "classification": "16",
   "imdb_score": 7.1,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe8"
@@ -116,8 +116,8 @@
   "genre": "ficção científica",
   "classification": "10",
   "imdb_score": 8.6,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebe9"
@@ -128,8 +128,8 @@
   "genre": "comédia",
   "classification": "12",
   "imdb_score": 6.4,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebea"
@@ -140,8 +140,8 @@
   "genre": "animação",
   "classification": "12",
   "imdb_score": 8.4,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebeb"
@@ -152,8 +152,8 @@
   "genre": "ficção científica",
   "classification": "14",
   "imdb_score": 8.7,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebec"
@@ -164,8 +164,8 @@
   "genre": "suspense",
   "classification": "16",
   "imdb_score": 8.2,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebed"
@@ -176,8 +176,8 @@
   "genre": "terror",
   "classification": "14",
   "imdb_score": 5.3,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebee"
@@ -188,8 +188,8 @@
   "genre": "fantasia",
   "classification": "18",
   "imdb_score": 9.2,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": true,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebef"
@@ -200,8 +200,8 @@
   "genre": "aventura",
   "classification": "12",
   "imdb_score": 8.4,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf0"
@@ -212,8 +212,8 @@
   "genre": "animação",
   "classification": "L",
   "imdb_score": 8.5,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf1"
@@ -224,8 +224,8 @@
   "genre": "ficção científica",
   "classification": "L",
   "imdb_score": 8.5,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf2"
@@ -236,8 +236,8 @@
   "genre": "ação",
   "classification": "12",
   "imdb_score": 7.1,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf3"
@@ -248,8 +248,8 @@
   "genre": "comédia",
   "classification": "14",
   "imdb_score": 7.7,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf4"
@@ -260,8 +260,8 @@
   "genre": "romance",
   "classification": "12",
   "imdb_score": 7.4,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf5"
@@ -272,8 +272,8 @@
   "genre": "fantasia",
   "classification": "14",
   "imdb_score": 8.7,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf6"
@@ -284,8 +284,8 @@
   "genre": "suspense",
   "classification": "14",
   "imdb_score": 8.6,
-  "tipo": "filme",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf7"
@@ -296,8 +296,8 @@
   "genre": "aventura",
   "classification": "L",
   "imdb_score": 7.4,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf8"
@@ -308,8 +308,8 @@
   "genre": "ação",
   "classification": "12",
   "imdb_score": 6.9,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebf9"
@@ -320,8 +320,8 @@
   "genre": "animação",
   "classification": "L",
   "imdb_score": 7.2,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebfa"
@@ -332,8 +332,8 @@
   "genre": "aventura",
   "classification": "12",
   "imdb_score": 7.1,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebfb"
@@ -344,8 +344,8 @@
   "genre": "histórico",
   "classification": "16",
   "imdb_score": 8.1,
-  "tipo": "filme",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "filme"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebfc"
@@ -356,8 +356,8 @@
   "genre": "comédia",
   "classification": "12",
   "imdb_score": 7.7,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebfd"
@@ -368,8 +368,8 @@
   "genre": "comédia",
   "classification": "L",
   "imdb_score": 7.9,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebfe"
@@ -380,8 +380,8 @@
   "genre": "crime",
   "classification": "16",
   "imdb_score": 9.5,
-  "tipo": "série",
-  "metacritic_must_see": true
+  "metacritic_must_see": true,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ebff"
@@ -392,8 +392,8 @@
   "genre": "animação",
   "classification": "10",
   "imdb_score": 9.3,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ec00"
@@ -404,8 +404,8 @@
   "genre": "drama",
   "classification": "14",
   "imdb_score": 8.7,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 },{
   "_id": {
     "$oid": "634363c7e7ca79111913ec01"
@@ -416,6 +416,6 @@
   "genre": "comédia",
   "classification": "12",
   "imdb_score": 8.3,
-  "tipo": "série",
-  "metacritic_must_see": false
+  "metacritic_must_see": false,
+  "tipo": "série"
 }]
