@@ -1,3 +1,6 @@
+db.dropDatabase();
+
+// Criando coleção de mídias (filmes e séries)
 db.createCollection("visual_media");
 
 db.visual_media.insertMany([
