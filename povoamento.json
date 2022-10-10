@@ -1,8 +1,4 @@
-// Cria coleção de mídias (filmes e séries)
-
-db.createCollection("visual_media");
-
-db.players.insertMany([
+[
 {
   "title": "Star Wars: Episódio V - O Império Contra-Ataca",
   "director": "Irvin Kershner",
