@@ -364,7 +364,6 @@ db.createCollection("streamings");
 db.streamings.insertOne(
     {
         "name": "Disney+",
-        "subscription_fee": 27.90,
         "headquarters": "Los Angeles",
         "founded": new Date("2019-11-12"),
         "media": [
