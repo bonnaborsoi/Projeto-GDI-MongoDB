@@ -32,10 +32,23 @@ db.visual_media.find({
     imdb_score: 1
 }).sort({imdb_score : 1});
 
+//SUM: mostra a soma de todos os valores de inscrição, agrupado por tipo de plano (mensal ou anual)
+db.inscricoes.aggregate(
+[
+     {
+       $group:
+         {
+           _id: "$duration",
+           total: { $sum: "$subscription_fee"},
+         }
+     }
+]
+)
+
 //COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
 
-//MATCH, PROJECT, GTE
+//PROJECT, COND
 db.inscricoes.aggregate(
    [
      {
