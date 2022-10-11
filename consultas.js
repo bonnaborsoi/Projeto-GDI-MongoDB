@@ -4,23 +4,19 @@ db.streamings.find().pretty();
 //SIZE: lista as inscrições com 1 plataforma de streaming
 db.inscricoes.find({platforms:{$size: 1}}).pretty();
 
-//AGGREGATE, MATCH, GROUP, MAX
+//AGGREGATE, GROUP, MAX
 db.visual_media.aggregate( [
    //Filtra as mídias buscando os que são filmes
    {
-      $match: {  "tipo": "filme"}
+      $match: {  "type": "filme"}
    },
-   // Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
+   //Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
    {
       $group: { _id: "$genre", highest_rating: {$max: "$imdb_score"}}
    }
   ]);
 
 ]);
-
-//COUNT
-//Conta a quantidade de inscrições que são combos
-db.inscricoes.find( { combo: true ).count()
 
 //MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
