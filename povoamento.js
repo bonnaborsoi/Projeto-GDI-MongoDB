@@ -453,7 +453,7 @@ db.createCollection("inscricoes");
 db.inscricoes.insertOne(
     {
         "name": "Netflix Básico",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 25.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -467,7 +467,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Netflix Padrão",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 39.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -481,7 +481,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Netflix Premium",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 55.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -495,7 +495,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Disney+ mensal",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 27.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -509,7 +509,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Disney+ anual",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 279.90,
         "cancellation_fee": 0,
         "duration": "anual",
@@ -523,7 +523,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "HBO Max mensal",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 27.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -537,7 +537,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "HBO Max anual",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 239.90,
         "cancellation_fee": 0,
         "duration": "anual",
@@ -551,7 +551,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Prime Video mensal",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 14.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -565,7 +565,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Prime Video anual",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 119.0,
         "cancellation_fee": 0,
         "duration": "anual",
@@ -579,7 +579,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Globoplay mensal",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 22.90,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -593,7 +593,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Globoplay anual",
-        "pacote": false,
+        "combo": false,
         "subscription_fee": 238.80,
         "cancellation_fee": 0,
         "duration": "anual",
@@ -608,7 +608,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Pacote Não falamos do Bruno",
-        "pacote": true,
+        "combo": true,
         "subscription_fee": 459.80,
         "cancellation_fee": 45.0,
         "duration": "anual",
@@ -623,7 +623,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Pacote I have the high ground",
-        "pacote": true,
+        "combo": true,
         "subscription_fee": 72.90,
         "cancellation_fee": 10.0,
         "duration": "mensal",
@@ -639,7 +639,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Pacote Beginning to Believe",
-        "pacote": true,
+        "combo": true,
         "subscription_fee": 400,
         "cancellation_fee": 0,
         "duration": "anual",
@@ -654,7 +654,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Pacote To Rule Them All",
-        "pacote": true,
+        "combo": true,
         "subscription_fee": 106.80,
         "cancellation_fee": 0,
         "duration": "mensal",
@@ -672,7 +672,7 @@ db.inscricoes.insertOne(
 db.inscricoes.insertOne(
     {
         "name": "Pacote Great Power",
-        "pacote": true,
+        "combo": true,
         "subscription_fee": 94.90,
         "cancellation_fee": 0,
         "duration": "mensal",
