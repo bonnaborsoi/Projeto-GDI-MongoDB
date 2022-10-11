@@ -8,13 +8,15 @@ db.inscricoes.find({platforms:{$size: 1}}).pretty();
 db.visual_media.aggregate( [
    //Filtra as mídias buscando os que são filmes
    {
-      $match: {  "tipo": "filme" }
+      $match: {  "tipo": "filme"}
    },
    // Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
    {
-      $group: { _id: "$genre", highest_rating: {max: "$imdb_score" }
+      $group: { _id: "$genre", highest_rating: {$max: "$imdb_score"}}
    }
   ]);
+
+]);
 
 //MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
