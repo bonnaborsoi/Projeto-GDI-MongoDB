@@ -34,3 +34,23 @@ db.visual_media.find({
 
 //COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
+
+//MATCH, PROJECT, GTE
+db.inscricoes.aggregate(
+   [
+     {
+      $match: {  "pacote": "true"}
+     },
+     {
+      $match: {  "duration": "mensal"}
+     },
+     {
+       $project:
+          {
+            _id: 0,
+            name: 1,
+            subscription_fee: {$cond: {if: {$gte: ["$subscription_fee", 100]}, then: "Caro", else: "Barato"}},
+          }
+     }
+   ]
+)
