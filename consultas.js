@@ -48,7 +48,7 @@ db.inscricoes.aggregate(
 //COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
 
-//PROJECT, COND
+//PROJECT, COND (não funcionou ainda)
 db.inscricoes.aggregate(
    [
      {
