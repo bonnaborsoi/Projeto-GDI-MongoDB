@@ -18,6 +18,10 @@ db.visual_media.aggregate( [
 
 ]);
 
+//COUNT
+//Conta a quantidade de inscrições que são combos
+db.inscricoes.find( { combo: true ).count()
+
 //MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
 
