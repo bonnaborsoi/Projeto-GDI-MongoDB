@@ -46,7 +46,7 @@ db.inscricoes.aggregate(
 //COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
 
-// PROJECT, COND (não funcionou ainda)
+// PROJECT, COND 
 // Faz uma comparação de todas os pacotes e os classifica entre caro e barato
 db.inscricoes.aggregate(
    [
@@ -70,3 +70,10 @@ db.visual_media.find( { $text: { $search: "Miyazaki"} } )
 // SET
 // Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
 db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
+
+// ALL
+// Seleciona os combos que oferecem Netflix e Disney+ simultaneamente
+db.inscricoes.find({streamings: {$all: [
+    db.streamings.findOne({"name": "Netflix"})._id,
+    db.streamings.findOne({"name": "Disney+"})._id,
+]}}).pretty();
