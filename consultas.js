@@ -71,7 +71,7 @@ db.visual_media.find( { $text: { $search: "Miyazaki"} } )
 // Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
 db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
 
-// ALL
+// ALL(NÃO FUNFA)
 // Seleciona os combos que oferecem Netflix e Disney+ simultaneamente
 db.inscricoes.find({streamings: {$all: [
     db.streamings.findOne({"name": "Netflix"})._id,
