@@ -50,7 +50,7 @@ db.visual_media.count();
 db.inscricoes.aggregate(
    [
      {
-      $match: {  "pacote": "true"}
+      $match: {  "combo": "true"}
      },
      {
       $match: {  "duration": "mensal"}
