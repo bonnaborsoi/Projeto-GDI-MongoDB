@@ -16,8 +16,6 @@ db.visual_media.aggregate( [
    }
   ]);
 
-]);
-
 //MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
 
