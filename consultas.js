@@ -66,3 +66,7 @@ db.inscricoes.aggregate(
 //Procura filmes/séries cujo nome do diretor contém "Miyazaki"
 db.visual_media.createIndex( { director: "text" } )
 db.visual_media.find( { $text: { $search: "Miyazaki"} } )
+
+// SET
+// Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
+db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
