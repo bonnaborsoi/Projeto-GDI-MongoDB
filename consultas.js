@@ -62,3 +62,7 @@ db.inscricoes.aggregate(
    ]
 );
 
+//TEXT
+//Procura filmes/séries cujo nome do diretor contém "Miyazaki"
+db.visual_media.createIndex( { director: "text" } )
+db.visual_media.find( { $text: { $search: "Miyazaki"} } )
