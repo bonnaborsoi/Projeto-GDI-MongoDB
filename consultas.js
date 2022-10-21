@@ -46,22 +46,19 @@ db.inscricoes.aggregate(
 //COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
 
-//PROJECT, COND (não funcionou ainda)
+// PROJECT, COND (não funcionou ainda)
+// Faz uma comparação de todas os pacotes e os classifica entre caro e barato
 db.inscricoes.aggregate(
    [
-     {
-      $match: {  "combo": "true"}
-     },
-     {
-      $match: {  "duration": "mensal"}
-     },
      {
        $project:
           {
             _id: 0,
             name: 1,
-            subscription_fee: {$cond: {if: {$gte: ["$subscription_fee", 100]}, then: "Caro", else: "Barato"}},
+            subscription_fee: 
+            {$cond: {if: {$gte: ["$subscription_fee", 100]}, then: "Caro", else: "Barato"}},
           }
      }
    ]
-)
+);
+
