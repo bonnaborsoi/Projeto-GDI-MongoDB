@@ -86,7 +86,10 @@ db.inscricoes.aggregate([
   {$match : {combo: true}},
   {$limit: 2}
 ]);
-
+// EXIST
+// Ele tira metacritic da coleção cidade de Deus pois é falso, logo após lista a obra visual não possui a característica metacritic
+db.visual_media.updateOne({title: "Cidade De Deus"}, {$unset: {"metacritic_must_see": null}});
+db.visual_media.find({metacritic_must_see: {$exists: false}})
 
 
 //---------------RODAR POR ÚLTIMO-----------------------
