@@ -91,6 +91,10 @@ db.inscricoes.aggregate([
 db.visual_media.updateOne({title: "Cidade De Deus"}, {$unset: {"metacritic_must_see": null}});
 db.visual_media.find({metacritic_must_see: {$exists: false}})
 
+// WHERE E FUNCTION
+// Retorna informações da mídia visual cujo nome é "House, M.D."
+// OBS: @Bonna @João, tentem rodar essa consulta, ela não roda no Atlas, mas pelo que vimos na internet, roda no projeto local. Resta testar
+db.visual_media.find({$where: function(){return (this.title == "House, M.D.")}})
 
 //---------------RODAR POR ÚLTIMO-----------------------
 //RENAMECOLLECTION 
