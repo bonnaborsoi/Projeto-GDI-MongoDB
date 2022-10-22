@@ -68,6 +68,7 @@ db.visual_media.createIndex( { director: "text" } )
 db.visual_media.find( { $text: { $search: "Miyazaki"} } )
 
 // SET
+// Rodar db.inscricoes.find().pretty();  antes e depois para mostrar que houve a mudança
 // Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
 db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
 
