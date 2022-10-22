@@ -86,3 +86,11 @@ db.inscricoes.aggregate([
   {$match : {combo: true}},
   {$limit: 2}
 ]);
+
+
+
+//---------------RODAR POR ÚLTIMO-----------------------
+//RENAMECOLLECTION 
+// Muda o nome da Coleção visual_media para media_set
+// Para conferir db.getCollectionNames()
+db.visual_media.renameCollection("media_set");
