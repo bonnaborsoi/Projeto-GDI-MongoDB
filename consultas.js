@@ -77,3 +77,11 @@ db.inscricoes.find({streamings: {$all: [
     db.streamings.findOne({"name": "Netflix"})._id,
     db.streamings.findOne({"name": "Disney+"})._id,
 ]}}).pretty();
+
+
+// LIMIT:
+// Retorna apenas 2 combos
+db.inscricoes.aggregate([
+  {$match : {combo: true}},
+  {$limit: 2}
+]);
