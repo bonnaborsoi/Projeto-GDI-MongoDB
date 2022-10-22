@@ -96,6 +96,23 @@ db.visual_media.find({metacritic_must_see: {$exists: false}})
 // OBS: @Bonna @João, tentem rodar essa consulta, ela não roda no Atlas, mas pelo que vimos na internet, roda no projeto local. Resta testar
 db.visual_media.find({$where: function(){return (this.title == "House, M.D.")}})
 
+
+//ADDTOSET
+//Adiciona os serviços HBO Max e Netflix ao Pacote Não Falamos do Bruno
+//para mostrar
+//db.inscricoes.find({name : "Pacote Não falamos do Bruno"}).pretty();
+db.inscricoes.updateMany(
+    {name: "Pacote Não falamos do Bruno"}, {$addToSet:{
+        platforms:{
+            $each:[
+                db.streamings.findOne({name: "HBO Max"})._id,
+                db.streamings.findOne({name: "Netflix"})._id
+            ]
+        }
+    }}
+);
+
+
 //---------------RODAR POR ÚLTIMO-----------------------
 //RENAMECOLLECTION 
 // Muda o nome da Coleção visual_media para media_set
