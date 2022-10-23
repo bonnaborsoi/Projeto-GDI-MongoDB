@@ -1,10 +1,10 @@
-//FIND: retorna todos as plataformas de streaming que estão no banco de dados
+// FIND: retorna todos as plataformas de streaming que estão no banco de dados
 db.streamings.find().pretty(); 
 
-//SIZE: lista as inscrições com 1 plataforma de streaming
+// SIZE: lista as inscrições com 1 plataforma de streaming
 db.inscricoes.find({platforms:{$size: 1}}).pretty();
 
-//AGGREGATE, GROUP, MAX
+// AGGREGATE, GROUP, MAX
 db.visual_media.aggregate( [
    //Filtra as mídias buscando os que são filmes
    {
@@ -16,10 +16,10 @@ db.visual_media.aggregate( [
    }
   ]);
 
-//MATCH: lista todas as inscrições que contêm combos
+// MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
 
-//GTE: seleciona todos os filmes/séries que tem nota maior ou igual a 8.5 no IMDB
+// GTE: seleciona todos os filmes/séries que tem nota maior ou igual a 8.5 no IMDB
 //Mostra os selecionados com título e nota em ordem crescente
 db.visual_media.find({
     imdb_score: {
@@ -30,7 +30,7 @@ db.visual_media.find({
     imdb_score: 1
 }).sort({imdb_score : 1});
 
-//SUM: mostra a soma de todos os valores de inscrição, agrupado por tipo de plano (mensal ou anual)
+// SUM: mostra a soma de todos os valores de inscrição, agrupado por tipo de plano (mensal ou anual)
 db.inscricoes.aggregate(
 [
      {
@@ -43,7 +43,7 @@ db.inscricoes.aggregate(
 ]
 )
 
-//COUNT: conta a quantidade total de filmes/séries
+// COUNT: conta a quantidade total de filmes/séries
 db.visual_media.count();
 
 // PROJECT, COND 
@@ -62,12 +62,12 @@ db.inscricoes.aggregate(
    ]
 );
 
-//TEXT
+// TEXT, SEARCH
 //Procura filmes/séries cujo nome do diretor contém "Miyazaki"
 db.visual_media.createIndex( { director: "text" } )
 db.visual_media.find( { $text: { $search: "Miyazaki"} } )
 
-// SET
+//SET
 // Rodar db.inscricoes.find().pretty();  antes e depois para mostrar que houve a mudança
 // Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
 db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
@@ -97,7 +97,7 @@ db.visual_media.find({metacritic_must_see: {$exists: false}})
 db.visual_media.find({$where: function(){return (this.title == "House, M.D.")}})
 
 
-//ADDTOSET
+// ADDTOSET
 //Adiciona os serviços HBO Max e Netflix ao Pacote Não Falamos do Bruno
 //para mostrar
 //db.inscricoes.find({name : "Pacote Não falamos do Bruno"}).pretty();
@@ -114,7 +114,7 @@ db.inscricoes.updateMany(
 
 
 //---------------RODAR POR ÚLTIMO-----------------------
-//RENAMECOLLECTION 
+// RENAMECOLLECTION 
 // Muda o nome da Coleção visual_media para media_set
 // Para conferir db.getCollectionNames()
 db.visual_media.renameCollection("media_set");
