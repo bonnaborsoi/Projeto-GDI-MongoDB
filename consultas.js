@@ -112,6 +112,28 @@ db.inscricoes.updateMany(
     }}
 );
 
+// AVG E LOOKUP
+// Calcula a nota media dos filmes de cada serviço de streaming
+db.streamings.aggregate([
+    { $lookup: {
+          from: "visual_media",
+          localField: "media",
+          foreignField: "_id",
+          as: "media_info"
+    } },
+    { $set: {
+          "media": "$media_info"
+    } },
+    { $project: {
+          "media_info": 0
+    } },
+    { $unwind: "$media" },
+    { $group: {
+            _id: "$name", 
+            average_imdb: { $avg: "$media.imdb_score"}
+    } }
+]);
+
 
 //---------------RODAR POR ÚLTIMO-----------------------
 // RENAMECOLLECTION 
