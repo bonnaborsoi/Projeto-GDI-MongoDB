@@ -134,6 +134,15 @@ db.streamings.aggregate([
     } }
 ]);
 
+//FINDONE
+//Retorna uma mídia (filme ou série) que tenha o selo must see do metacritic ou cuja noja do imdb é maior ou igual a 8.5
+db.visual_media.findOne(
+   {
+     $or: [ {metacritic_must_see: true},            
+            { 'imdb_score' : {$gte: 8.5}},
+          ]
+   }
+)
 
 //---------------RODAR POR ÚLTIMO-----------------------
 // RENAMECOLLECTION 
