@@ -6,11 +6,11 @@ db.subscriptions.find({platforms:{$size: 1}}).pretty();
 
 // AGGREGATE, GROUP, MAX
 db.visual_media.aggregate( [
-   //Filtra as mídias buscando os que são filmes
+   // Filtra as mídias buscando os que são filmes
    {
       $match: {  "type": "filme"}
    },
-   //Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
+   // Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
    {
       $group: { _id: "$genre", highest_rating: {$max: "$imdb_score"}}
    }
@@ -158,7 +158,7 @@ db.map_reduce_saida.find();
 db.subscriptions.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
 
 // EXIST
-// Ele tira metacritic da coleção cidade de Deus pois é falso, logo após lista a obra visual não possui a característica metacritic
+// Ele tira metacritic da coleção cidade de Deus pois é falso, logo após lista a obra visual que não possui a característica metacritic
 db.visual_media.updateOne({title: "Cidade De Deus"}, {$unset: {"metacritic_must_see": null}});
 db.visual_media.find({metacritic_must_see: {$exists: false}})
 
