@@ -447,10 +447,10 @@ db.streamings.insertOne(
 );
 
 // Criando a coleção de inscrições
-db.createCollection("inscricoes");
+db.createCollection("subscriptions");
 
 // Inserindo na coleção
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Netflix Básico",
         "combo": false,
@@ -459,12 +459,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 1,
         "platforms": [
-            db.streamings.findOne({"name": "Netflix"})._id,
+            db.streamings.findOne({"name": "Netflix"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Netflix Padrão",
         "combo": false,
@@ -473,12 +473,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 2,
         "platforms": [
-            db.streamings.findOne({"name": "Netflix"})._id,
+            db.streamings.findOne({"name": "Netflix"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Netflix Premium",
         "combo": false,
@@ -487,12 +487,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 4,
         "platforms": [
-            db.streamings.findOne({"name": "Netflix"})._id,
+            db.streamings.findOne({"name": "Netflix"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Disney+ mensal",
         "combo": false,
@@ -501,12 +501,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 4,
         "platforms": [
-            db.streamings.findOne({"name": "Disney+"})._id,
+            db.streamings.findOne({"name": "Disney+"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Disney+ anual",
         "combo": false,
@@ -515,12 +515,12 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 4,
         "platforms": [
-            db.streamings.findOne({"name": "Disney+"})._id,
+            db.streamings.findOne({"name": "Disney+"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "HBO Max mensal",
         "combo": false,
@@ -529,12 +529,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "HBO Max"})._id,
+            db.streamings.findOne({"name": "HBO Max"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "HBO Max anual",
         "combo": false,
@@ -543,12 +543,12 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "HBO Max"})._id,
+            db.streamings.findOne({"name": "HBO Max"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Prime Video mensal",
         "combo": false,
@@ -557,12 +557,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "Prime Video"})._id,
+            db.streamings.findOne({"name": "Prime Video"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Prime Video anual",
         "combo": false,
@@ -571,12 +571,12 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "Prime Video"})._id,
+            db.streamings.findOne({"name": "Prime Video"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Globoplay mensal",
         "combo": false,
@@ -585,12 +585,12 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 5,
         "platforms": [
-            db.streamings.findOne({"name": "Globoplay"})._id,
+            db.streamings.findOne({"name": "Globoplay"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Globoplay anual",
         "combo": false,
@@ -599,13 +599,13 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 5,
         "platforms": [
-            db.streamings.findOne({"name": "Globoplay"})._id,
+            db.streamings.findOne({"name": "Globoplay"}),
         ]
     }
 );
 
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Pacote Não falamos do Bruno",
         "combo": true,
@@ -614,13 +614,13 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "Globoplay"})._id,
-            db.streamings.findOne({"name": "Disney+"})._id,
+            db.streamings.findOne({"name": "Globoplay"}),
+            db.streamings.findOne({"name": "Disney+"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Pacote I have the high ground",
         "combo": true,
@@ -629,14 +629,14 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "Netflix"})._id,
-            db.streamings.findOne({"name": "Prime Video"})._id,
-            db.streamings.findOne({"name": "Disney+"})._id,
+            db.streamings.findOne({"name": "Netflix"}),
+            db.streamings.findOne({"name": "Prime Video"}),
+            db.streamings.findOne({"name": "Disney+"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Pacote Beginning to Believe",
         "combo": true,
@@ -645,13 +645,13 @@ db.inscricoes.insertOne(
         "duration": "anual",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "HBO Max"})._id,
-            db.streamings.findOne({"name": "Globoplay"})._id,
+            db.streamings.findOne({"name": "HBO Max"}),
+            db.streamings.findOne({"name": "Globoplay"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Pacote To Rule Them All",
         "combo": true,
@@ -660,16 +660,16 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "HBO Max"})._id,
-            db.streamings.findOne({"name": "Globoplay"})._id,
-            db.streamings.findOne({"name": "Netflix"})._id,
-            db.streamings.findOne({"name": "Prime Video"})._id,
-            db.streamings.findOne({"name": "Disney+"})._id,
+            db.streamings.findOne({"name": "HBO Max"}),
+            db.streamings.findOne({"name": "Globoplay"}),
+            db.streamings.findOne({"name": "Netflix"}),
+            db.streamings.findOne({"name": "Prime Video"}),
+            db.streamings.findOne({"name": "Disney+"}),
         ]
     }
 );
 
-db.inscricoes.insertOne(
+db.subscriptions.insertOne(
     {
         "name": "Pacote Great Power",
         "combo": true,
@@ -678,10 +678,10 @@ db.inscricoes.insertOne(
         "duration": "mensal",
         "screens": 3,
         "platforms": [
-            db.streamings.findOne({"name": "HBO Max"})._id,
-            db.streamings.findOne({"name": "Globoplay"})._id,
-            db.streamings.findOne({"name": "Netflix"})._id,
-            db.streamings.findOne({"name": "Prime Video"})._id,
+            db.streamings.findOne({"name": "HBO Max"}),
+            db.streamings.findOne({"name": "Globoplay"}),
+            db.streamings.findOne({"name": "Netflix"}),
+            db.streamings.findOne({"name": "Prime Video"}),
         ]
     }
 );
