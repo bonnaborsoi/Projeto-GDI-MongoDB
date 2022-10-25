@@ -161,6 +161,24 @@ db.subscriptions.aggregate( [
    },
 ]);
 
+//MAPREDUCE, FUNCTION
+// Exibe a quantidade de telas de cada inscrição, seja individual ou seja pacote
+var mapFun = function(){
+  emit(this.name, this.screens)
+};
+var reduceFun = function(name, amount){
+  const screen_number = amount.reduce((a, b) => a + b, 0);
+  return (name, screen_number)
+};
+db.subscriptions.mapReduce(
+  mapFun,
+  reduceFun,
+  {
+    out: 'map_reduce_saida'
+  }
+);
+db.map_reduce_saida.find(); 
+
 //---------------RODAR POR ÚLTIMO-----------------------
 // RENAMECOLLECTION 
 // Muda o nome da Coleção visual_media para media_set
