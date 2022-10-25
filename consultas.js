@@ -144,6 +144,23 @@ db.visual_media.findOne(
    }
 )
 
+//FILTER
+//Retorna as inscrições que contêm plataformas fundadas a partir de 1 de janeiro de 2017
+db.inscricoes.aggregate( [
+   {
+      $project: {
+        name: 1, _id: 0,
+         platforms: {
+            $filter: {
+               input: "$platforms",
+               as: "platform",
+               cond: { $gte: [ "$$platform.founded", new Date("2017-01-01") ] }
+            },
+         },
+      },
+   },
+]);
+
 //---------------RODAR POR ÚLTIMO-----------------------
 // RENAMECOLLECTION 
 // Muda o nome da Coleção visual_media para media_set
