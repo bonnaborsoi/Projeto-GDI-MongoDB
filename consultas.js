@@ -14,7 +14,7 @@ db.visual_media.aggregate( [
    {
       $group: { _id: "$genre", highest_rating: {$max: "$imdb_score"}}
    }
-  ]);
+]);
 
 // MATCH: lista todas as inscrições que contêm combos
 db.inscricoes.aggregate([{$match : {combo: true}}]);
@@ -75,8 +75,8 @@ db.inscricoes.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo
 // ALL
 // Seleciona os combos que oferecem Netflix e Disney+ simultaneamente
 db.inscricoes.find({platforms: {$all: [
-        db.streamings.findOne({"name": "Netflix"})._id,
-        db.streamings.findOne({"name": "Disney+"})._id,
+        db.streamings.findOne({"name": "Netflix"}),
+        db.streamings.findOne({"name": "Disney+"}),
 ]}}).pretty();
 
 
