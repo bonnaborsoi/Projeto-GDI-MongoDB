@@ -67,18 +67,12 @@ db.subscriptions.aggregate(
 db.visual_media.createIndex( { director: "text" } )
 db.visual_media.find( { $text: { $search: "Miyazaki"} } )
 
-// SET
-// Rodar db.subscriptions.find().pretty();  antes e depois para mostrar que houve a mudança
-// Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
-db.subscriptions.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
-
 // ALL
 // Seleciona os combos que oferecem Netflix e Disney+ simultaneamente
 db.subscriptions.find({platforms: {$all: [
         db.streamings.findOne({"name": "Netflix"}),
         db.streamings.findOne({"name": "Disney+"}),
 ]}}).pretty();
-
 
 // LIMIT:
 // Retorna apenas 2 combos
@@ -87,30 +81,9 @@ db.subscriptions.aggregate([
   {$limit: 2}
 ]);
 
-// EXIST
-// Ele tira metacritic da coleção cidade de Deus pois é falso, logo após lista a obra visual não possui a característica metacritic
-db.visual_media.updateOne({title: "Cidade De Deus"}, {$unset: {"metacritic_must_see": null}});
-db.visual_media.find({metacritic_must_see: {$exists: false}})
-
 // WHERE E FUNCTION
 // Retorna informações da mídia visual cujo nome é "House, M.D."
 db.visual_media.find({$where: function(){return (this.title == "House, M.D.")}})
-
-
-// ADDTOSET
-// Adiciona os serviços HBO Max e Netflix ao Pacote Não Falamos do Bruno
-// para mostrar
-// db.subscriptions.find({name : "Pacote Não falamos do Bruno"}).pretty();
-db.subscriptions.updateMany(
-    {name: "Pacote Não falamos do Bruno"}, {$addToSet:{
-        platforms:{
-            $each:[
-                db.streamings.findOne({name: "HBO Max"}),
-                db.streamings.findOne({name: "Netflix"})
-            ]
-        }
-    }}
-);
 
 // AVG E LOOKUP
 // Calcula a nota media dos filmes de cada serviço de streaming
@@ -178,6 +151,31 @@ db.subscriptions.mapReduce(
   }
 );
 db.map_reduce_saida.find(); 
+
+// SET
+// Rodar db.subscriptions.find().pretty();  antes e depois para mostrar que houve a mudança
+// Muda o nome do Pacote To Rule Them All para Combo Expelliarmus
+db.subscriptions.updateOne({name: "Pacote To Rule Them All"}, {$set:{"name": "Combo Expelliarmus"}});
+
+// EXIST
+// Ele tira metacritic da coleção cidade de Deus pois é falso, logo após lista a obra visual não possui a característica metacritic
+db.visual_media.updateOne({title: "Cidade De Deus"}, {$unset: {"metacritic_must_see": null}});
+db.visual_media.find({metacritic_must_see: {$exists: false}})
+
+// ADDTOSET
+// Adiciona os serviços HBO Max e Netflix ao Pacote Não Falamos do Bruno
+// para mostrar
+// db.subscriptions.find({name : "Pacote Não falamos do Bruno"}).pretty();
+db.subscriptions.updateMany(
+    {name: "Pacote Não falamos do Bruno"}, {$addToSet:{
+        platforms:{
+            $each:[
+                db.streamings.findOne({name: "HBO Max"}),
+                db.streamings.findOne({name: "Netflix"})
+            ]
+        }
+    }}
+);
 
 //---------------RODAR POR ÚLTIMO-----------------------
 // RENAMECOLLECTION 
