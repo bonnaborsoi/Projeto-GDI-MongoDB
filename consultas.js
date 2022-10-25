@@ -105,8 +105,8 @@ db.subscriptions.updateMany(
     {name: "Pacote Não falamos do Bruno"}, {$addToSet:{
         platforms:{
             $each:[
-                db.streamings.findOne({name: "HBO Max"})._id,
-                db.streamings.findOne({name: "Netflix"})._id
+                db.streamings.findOne({name: "HBO Max"}),
+                db.streamings.findOne({name: "Netflix"})
             ]
         }
     }}
