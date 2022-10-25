@@ -10,7 +10,7 @@ db.visual_media.aggregate( [
    {
       $match: {  "type": "filme"}
    },
-   // Agrupa os filmes com base em gênero e diz qual é o que tem a maior avaliação
+   // Agrupa os filmes com base em gênero e diz qual é a nota do que tem a maior avaliação
    {
       $group: { _id: "$genre", highest_rating: {$max: "$imdb_score"}}
    }
